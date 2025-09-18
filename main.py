@@ -6,14 +6,13 @@ from telegram import Bot, Update
 
 
 # Define API key
-openrouter_API = "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"
-multx_gpt = "8452975565:AAHxM9AOYaIdHFXdByasMvxq7RrwRE04kK0"
+openrouter_API = "PAST_YOUR_OPENROUTER_API_KEY"
+multx_gpt = "PAST_YOUR_TELEGRAM_TOKEN"
 
 # Define models
 deepseek_model = "deepseek/deepseek-chat-v3.1:free"
 nemotron_nano = "nvidia/nemotron-nano-9b-v2:free"
 gemma = "google/gemma-3n-e4b-it:free"
-#gpt_oss = "openai/gpt-oss-120b:free"
 glm = "z-ai/glm-4.5-air:free"
 #venice = "cognitivecomputations/dolphin-mistral-24b-venice-edition:free"
 
@@ -94,7 +93,7 @@ def gen_reply(prompt):
         return None
 
 # main loop
-print("Welcome to MultX GPT\n")
+print("Welcome to MultX GPT")
 
 async def main():
     bot = Bot(token=multx_gpt)
@@ -124,4 +123,5 @@ if __name__ == "__main__":
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
+
         print("\nExiting.")
